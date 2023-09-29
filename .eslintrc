@@ -4,13 +4,13 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["prettier"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["@typescript-eslint", "react", "prettier"],
   "rules": {
     "react/function-component-definition": [
       2,
@@ -19,6 +19,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "react/react-in-jsx-scope": "off",
     "quotes": ["error", "double"],
     "no-duplicate-imports": "error",
     "prettier/prettier": ["error"]

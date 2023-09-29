@@ -1,13 +1,13 @@
-import * as React from "react"
-import { FormHTMLAttributes, FunctionComponent, ReactNode } from "react";
-import { useForm, FormProvider } from "react-hook-form";
+import { FunctionComponent, ReactNode } from "react";
+import { useForm, FormProvider, FieldValues, DefaultValues, UseFormReturn, SubmitHandler } from "react-hook-form";
 
 import styles from "./Form.module.scss";
 
-type FormProps = FormHTMLAttributes<HTMLFormElement> & {
-  defaultValues?: any;
-  onSubmit?: (data: any[]) => void;
-  useFormMethods?: any;
+type FormProps = {
+  className: string;
+  defaultValues?: DefaultValues<FieldValues> | { [x: string]: object | undefined };
+  onSubmit?: SubmitHandler<FieldValues>;
+  useFormMethods?: UseFormReturn<FieldValues>;
   children: ReactNode;
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "form-ease",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create Forms as fast as possible powered from react hook form",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

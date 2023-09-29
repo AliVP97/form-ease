@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsxdev",
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
+    "baseUrl": "src",
     "outDir": "./lib",
     "strict": true,
     "esModuleInterop": true,

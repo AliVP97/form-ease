@@ -2,7 +2,7 @@
   "name": "form-ease",
   "version": "0.0.1",
   "description": "Create Forms as fast as possible powered from react hook form",
-  "main": "index.js",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
@@ -10,7 +10,6 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
@@ -35,7 +34,18 @@
     "url": "https://github.com/AliVP97/form-ease/issues"
   },
   "homepage": "https://github.com/AliVP97/form-ease#readme",
+  "dependencies": {
+    "react-hook-form": "^7.46.2",
+    "react-multi-date-picker": "^4.3.1",
+    "sass": "^1.68.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
     "@types/jest": "^29.5.5",
@@ -46,10 +56,7 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^5.2.2"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-hook-form": "^7.46.2",
-    "react-multi-date-picker": "^4.3.1",
-    "sass": "^1.68.0"
-  }
+  "files": [
+    "lib"
+  ]
 }
